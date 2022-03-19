@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 
 
-//@SpringBootTest
+@SpringBootTest
 class UtilTest {
     @Test
 	void contextLoads() {
@@ -15,7 +15,7 @@ class UtilTest {
 
     @Test
 	public void testDxc() throws Exception {
-		assertEquals(3100000, Util.getDxc(500000, 31000000));
+		assertEquals(3100000, Util.getDxc(31000000, 500000));
 	}
 
 }

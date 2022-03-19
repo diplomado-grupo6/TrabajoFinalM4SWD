@@ -66,7 +66,7 @@ public class Util {
  * que retorne la UF en tiempo real.  Por ejemplo mindicador.cl
  * @return
  */
-public static float getUf(){
+public static int getUf(){
     try {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
@@ -88,7 +88,7 @@ public static float getUf(){
             JSONObject coderollsJSONObject = new JSONObject(output);
             JSONArray seriesJSONArray = coderollsJSONObject.getJSONArray("serie");
             JSONObject serieJSONObject = seriesJSONArray.getJSONObject(0);
-            float valorUf = serieJSONObject.getFloat("valor");
+            int valorUf = serieJSONObject.getInt("valor");
             System.out.println("serie: "+ valorUf +"\n");
             return valorUf;
         }
