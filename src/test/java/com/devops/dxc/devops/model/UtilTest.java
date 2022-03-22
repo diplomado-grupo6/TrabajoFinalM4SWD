@@ -44,6 +44,7 @@ class UtilTest {
 		assertEquals(0, Util.getImpuesto(700000,55537));
 		assertEquals(34010, Util.getImpuesto(1600000,55537));
 		assertEquals(63366, Util.getImpuesto(2000000,55537));
+		assertEquals(63366, Util.getImpuesto(2000000,55537));
 	}
 
 }

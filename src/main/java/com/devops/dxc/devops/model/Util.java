@@ -46,7 +46,7 @@ public class Util {
     }
 
     /**
-     * Método para cacular el el impuesto según el sueldo y un valor fijo del 4%.  
+     * Método para cacular el el impuesto según el sueldo y la tabla de segmentos  
      * 
      * @param sueldo
      * @param utm
