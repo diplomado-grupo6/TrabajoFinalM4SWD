@@ -7,6 +7,7 @@ function Limpiar(){
     document.getElementById("DivError").style.display = "none";
 }
 function Calcular10xCiento(){
+    
     document.getElementById("DivError").style.display = "none";
     document.getElementById("Resultado").innerHTML="";
     if(document.getElementById('sueldo_actual').value<=0)
@@ -21,11 +22,11 @@ function Calcular10xCiento(){
         document.getElementById("Error").innerHTML="Ingresar monto ahorrado";
         return false;
     }
+    let urlParametros=url;
+    urlParametros=urlParametros.replace('@sueldo',document.getElementById('sueldo_actual').value);
+    urlParametros=urlParametros.replace('@ahorro',document.getElementById('monto_ahorrado').value);
     
-    url=url.replace('@sueldo',document.getElementById('sueldo_actual').value);
-    url=url.replace('@ahorro',document.getElementById('monto_ahorrado').value);
-    
-    $.get(url).done(function(datos,status) {
+    $.get(urlParametros).done(function(datos,status) {
         
         document.getElementById("Resultado").innerHTML=
         "<table>"+
