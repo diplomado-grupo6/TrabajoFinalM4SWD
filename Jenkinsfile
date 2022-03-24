@@ -19,19 +19,17 @@ pipeline {
             steps{
                 script{
                     	figlet 'Pruebas JUnit'
-			sh 'pwd'
-			sh 'cd TrabajoFinalM4SWD'
-                    	sh 'mvn -Dtest=UtilTest test'
-                        
-                    
-                }
+                    	sh """	pwd
+	                    	cd TrabajoFinalM4SWD
+	                    	mvn -Dtest=UtilTest test"""
+			    }
             }
         }
         stage('PruebasPostmanNewman'){
             steps{
                 script{
                     figlet 'Pruebas Postman Newman'
-                        //sh 'mvn test'
+                    
                     
                 }
             }
@@ -40,8 +38,10 @@ pipeline {
             steps{
                 script{
                     	figlet 'Pruebas Selenium'
-			sh 'pwd'
-                    	sh 'mvn -Dtest=AppTest test'
+			        sh """	pwd
+	                    	cd TrabajoFinalM4SWD
+	                    	mvn -Dtest=AppTest test"""
+                    
                     
                 }
             }
