@@ -5,7 +5,7 @@ pipeline {
             steps{
                 script{
                       figlet 'Descargar Proyecto'
-                      git clone https://github.com/diplomado-grupo6/TrabajoFinalM4SWD.git
+                      sh 'git clone https://github.com/diplomado-grupo6/TrabajoFinalM4SWD.git'
                       
                     
                 }
