@@ -18,8 +18,10 @@ pipeline {
          stage('PruebasJUnit'){
             steps{
                 script{
-                    figlet 'Pruebas JUnit'
-                    sh 'mvn -Dtest=UtilTest test'
+                    	figlet 'Pruebas JUnit'
+			sh 'pwd'
+			sh 'cd TrabajoFinalM4SWD'
+                    	sh 'mvn -Dtest=UtilTest test'
                         
                     
                 }
@@ -37,8 +39,9 @@ pipeline {
         stage('PruebasSelenium'){
             steps{
                 script{
-                    figlet 'Pruebas Selenium'
-                    sh 'mvn -Dtest=AppTest test'
+                    	figlet 'Pruebas Selenium'
+			sh 'pwd'
+                    	sh 'mvn -Dtest=AppTest test'
                     
                 }
             }
