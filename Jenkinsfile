@@ -9,14 +9,12 @@ pipeline {
 	                    	ls -ltr
 	                    	rm -rf *
 	                    	ls -ltr"""
-                     
-		     sh """ git clone https://github.com/diplomado-grupo6/TrabajoFinalM4SWD.git
+                     sh """ git clone https://github.com/diplomado-grupo6/TrabajoFinalM4SWD.git
                             cd TrabajoFinalM4SWD
                             mvn clean
                             mvn compile
                      """
                       
-                    
                 }
             }
         }
@@ -34,7 +32,12 @@ pipeline {
             steps{
                 script{
                     figlet 'Pruebas Postman Newman'
-                    
+                    sh """	pwd
+                            cd TrabajoFinalM4SWD
+                            nohup bash mvn spring-boot:run &
+                            cd src/test/java/postman/
+                            newman run Dxc.postman_collection.json
+                    """
                     
                 }
             }
@@ -43,7 +46,7 @@ pipeline {
             steps{
                 script{
                     	figlet 'Pruebas Selenium'
-			        sh """	pwd
+			            sh """	pwd
 	                    	cd TrabajoFinalM4SWD
 	                    	mvn -Dtest=AppTest test"""
                     
