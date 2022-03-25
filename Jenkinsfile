@@ -9,7 +9,12 @@ pipeline {
 	                    	ls -ltr
 	                    	rm -rf *
 	                    	ls -ltr"""
-                     sh 'git clone https://github.com/diplomado-grupo6/TrabajoFinalM4SWD.git'
+                     
+		     sh """ git clone https://github.com/diplomado-grupo6/TrabajoFinalM4SWD.git
+                            cd TrabajoFinalM4SWD
+                            mvn clean
+                            mvn compile
+                     """
                       
                     
                 }
