@@ -35,6 +35,7 @@ pipeline {
                     sh """	pwd
                             cd TrabajoFinalM4SWD
                             nohup bash mvn spring-boot:run &
+                            sleep 30
                             cd src/test/java/postman/
                             newman run Dxc.postman_collection.json
                     """
@@ -48,7 +49,8 @@ pipeline {
                     	figlet 'Pruebas Selenium'
 			            sh """	pwd
 	                    	cd TrabajoFinalM4SWD
-				nohup bash mvn spring-boot:run &
+				            nohup bash mvn spring-boot:run &
+				            sleep 30
 	                    	mvn -Dtest=AppTest test"""
                     
                     
