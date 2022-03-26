@@ -48,6 +48,7 @@ pipeline {
                     	figlet 'Pruebas Selenium'
 			            sh """	pwd
 	                    	cd TrabajoFinalM4SWD
+				nohup bash mvn spring-boot:run &
 	                    	mvn -Dtest=AppTest test"""
                     
                     
