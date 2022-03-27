@@ -1,4 +1,13 @@
 # TrabajoFinalM4SWD
+## Información previa
+
+	
+### Pruebas unitarias
+src/test/java/com/devops/dxc/devops/model/UtilTest.java
+### Pruebas de integración
+src/test/java/postman/Dxc.postman_collection.json
+### Pruebas funcionales
+src/test/java/selenium/AppTest.java 
 
 ## Limpiar proyecto
 ```console
