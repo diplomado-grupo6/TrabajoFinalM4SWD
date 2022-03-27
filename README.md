@@ -30,13 +30,17 @@ nohup bash mvn spring-boot:run &
 ```
 
 ## Pruebas de integración
-se debe tener instalado newman
+* Se debe tener instalado newman 
+* La aplicación debe corriendo en puerto 8080
+
 ```console
 newman run src/test/java/postman/Dxc.postman_collection.json
 ```
 
 ## Pruebas funcionales
-Descargar drivers desde https://chromedriver.chromium.org/downloads y dejar en la carpeta drivers/
+* Descargar drivers desde https://chromedriver.chromium.org/downloads y dejar en la carpeta drivers/
+* La aplicación debe corriendo en puerto 8080
+
 ```console
 mvn -Dtest=AppTest test
 ```
