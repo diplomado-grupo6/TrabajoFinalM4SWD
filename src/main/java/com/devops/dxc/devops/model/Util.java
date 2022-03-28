@@ -56,11 +56,11 @@ public class Util {
         if(sueldo<0 || utm<0) return 0;
         if(sueldo<=13.5*utm) return 0;
         else if(sueldo<=30*utm) return Math.round(sueldo*0.04-(utm*0.54));
-        else if(sueldo<=50*utm) return Math.round(sueldo*0.08f-(utm*1.74));
-        else if(sueldo<=70*utm) return Math.round(sueldo*0.135f-(utm*4.49));
-        else if(sueldo<=90*utm) return Math.round(sueldo*0.23f-(utm*11.14));
-        else if(sueldo<=120f*utm) return Math.round(sueldo*0.304f-(utm*17.8));
-        else return Math.round(sueldo*0.35f-(utm*23.32));
+        else if(sueldo<=50*utm) return Math.round(sueldo*0.08-(utm*1.74));
+        else if(sueldo<=70*utm) return Math.round(sueldo*0.135-(utm*4.49));
+        else if(sueldo<=90*utm) return Math.round(sueldo*0.23-(utm*11.14));
+        else if(sueldo<=120*utm) return Math.round(sueldo*0.304-(utm*17.8));
+        else return Math.round(sueldo*0.35-(utm*23.32));
     }
 
     /**
