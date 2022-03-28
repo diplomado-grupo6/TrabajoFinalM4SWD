@@ -37,14 +37,17 @@ class UtilTest {
 
 	@Test
 	public void testImpuesto() throws Exception {
-		assertEquals(0, Util.getImpuesto(-40000000,-55537));
-		assertEquals(0, Util.getImpuesto(-40000000,55537));
-		assertEquals(0, Util.getImpuesto(40000000,-55537));
-		assertEquals(0, Util.getImpuesto(0,55537));
-		assertEquals(0, Util.getImpuesto(700000,55537));
-		assertEquals(34010, Util.getImpuesto(1600000,55537));
-		assertEquals(63366, Util.getImpuesto(2000000,55537));
-		assertEquals(63366, Util.getImpuesto(2000000,55537));
+		assertEquals(0, Util.getImpuesto(-40000000,-55704));
+		assertEquals(0, Util.getImpuesto(-40000000,55704));
+		assertEquals(0, Util.getImpuesto(40000000,-55704));
+		assertEquals(0, Util.getImpuesto(0,55704));
+		assertEquals(0, Util.getImpuesto(700000,55704));
+		assertEquals(36765, Util.getImpuesto(1671120,55704));
+		assertEquals(125891, Util.getImpuesto(2785200,55704));
+		assertEquals(276292, Util.getImpuesto(3899280,55704));
+		assertEquals(532530, Util.getImpuesto(5013360,55704));
+		assertEquals(1040551, Util.getImpuesto(6684480,55704));
+		assertEquals(1150983, Util.getImpuesto(7000000,55704));
 	}
 
 }
